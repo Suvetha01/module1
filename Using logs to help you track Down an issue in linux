@@ -1,0 +1,17 @@
+#Using logs to help you track Down an issue in linux
+#Fix low disk space
+ls /var/log
+sudo cat /var/log/syslog
+sudo du -a /home | sort -n -r | head -n 5
+sudo rm /home/lab/storage/ultra_mega_large.txt
+#remove corrupted file
+sudo rm /home/lab/corrupted_file
+#Update vlc
+sudo apt-get install -f
+dpkg -s vlc
+#End malicious processes
+ps ax
+ps aux |grep "totally_not_maliicious"
+sudo kill 315
+#change permission of secret file to public
+sudo chmod 777 /home/lab/super_secret_file.txt
